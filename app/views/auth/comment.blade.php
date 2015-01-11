@@ -26,8 +26,34 @@ background-color: #87AFED;
 
 <body>
 
+
+
+<?php 
+
+mysqli_connect("localhost", "Bayakissa", "Bayakissa101"); 
+mysqli_select_db($connect, 'bayakissa'); 
+
+$reponses = mysqli_query("SELECT * FROM comments"); 
+
+while ($donnees = mysqli_fetch_array($reponses) ) 
+{ 
+?> 
+
+$requete1 = $donnees['requete1']; 
+$requete2 = $donnees['requete2']; 
+$requete3 = $donnees['requete3']; 
+$requete4 = $donnees['requete4']; 
+$requete5 = $donnees['requete5']; 
+
+<?php 
+} 
+
+?> 
+
+
+
 <div class="col-md-12"><h4><strong>
-        Vous avez quelque chose à partager avec nous? Lancez-vous !
+        Vous aussi, vous avez quelque chose à partager avec nous? Lancez-vous !
     </strong></h4></div>
     <br>
     <div class="row col-md-12">
